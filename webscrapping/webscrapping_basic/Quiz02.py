@@ -2,7 +2,7 @@ from random import *
 
 words = ["apple", "banana", "orange"]
 word = choice(words)
-print("answer : " + word)
+print("answer : " + word, )
 letters = "ap"
 
 
