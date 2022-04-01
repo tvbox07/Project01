@@ -2,15 +2,37 @@ from random import *
 
 words = ["apple", "banana", "orange"]
 word = choice(words)
-print("answer : " + word, )
-letters = "ap"
+# word = "apple"
+print("answer : " + word)
+# letters = "ap"
+letters = ""
 
 
 while True:
+    succeed = True
+    print()
     for w in word:
         if w in letters:
-            print(w, end="")
+            print(w, end=" ")
         else:
-            print("_", end="")
+            print("_", end=" ")
+            succeed = False
+    # break
+    print()
 
-    break
+    if succeed:
+        print("Success")
+        break
+
+    letter = input("Input letter > ")  #사용자 입력받기
+    if letter not in letters:
+        letters += letter
+    if letter in word:
+        print("correct")
+    else:
+        print("wrong")
+    # if letters == word:
+    #     print(letters)
+    #     break
+    
+
